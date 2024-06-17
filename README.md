@@ -22,6 +22,11 @@ cd <repository-directory>
 docker-compose up
 ```
 
+3. ***Run it in browser***:
+localhost:7860
+
+The images in imges folder can be used to test out basic workflow with burger, sushi and non-food photo from Nvidia example for image caption.
+
 
 ## Diagram
 
