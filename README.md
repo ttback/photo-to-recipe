@@ -19,7 +19,7 @@ cd <repository-directory>
 
 2. **Build and Run the Docker Containers**:
 ```sh
-docker-compose up
+docker compose up
 ```
 
 3. ***Run it in browser***:
