@@ -1,4 +1,4 @@
-# Photo to Recipe generation with Mult-agents
+# Photo to Recipe generation with Multi-agents
 
 This project leverages generative AI agents to generate recipes from food images. By utilizing various tools and workflows, the application can extract ingredients, retrieve relevant documents, and generate detailed recipes. The project is crated with Langchain/Langgraph and can be ran with docker compose
 
