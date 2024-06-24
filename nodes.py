@@ -7,12 +7,13 @@ from tools.generate_recipe_tool import GenerateRecipeTool
 from tools.retriever import retriever
 from tools.retrieval_grader import retrieval_grader
 from tools.rag_generate import rag_chain
+from agent_logger import logger
+
 # Initialize tools
 extract_ingredients_tool = ExtractIngredientsTool()
 image_caption_tool = ImageCaptionTool()
 detect_food_tool = DetectFoodTool()
 generate_recipe_tool = GenerateRecipeTool()
-
 
 def retrieve(state):
     """
@@ -29,6 +30,7 @@ def retrieve(state):
 
     # Retrieval
     documents = retriever.invoke(question)
+    logger.add_log_with_context("retrieve", {"img_path": state.get("img_path", ""), "question": question})
     return {"documents": documents, "question": question}
 
 
@@ -49,9 +51,10 @@ def rag_generate(state):
     food_name = state.get("food_name", "")
     print(f"ingredients: {ingredients}")
     print(f"food_name: {food_name}")
-
     # RAG generation
     generation = rag_chain.invoke({"context": documents, "question": question, "ingredients": ",".join(ingredients), "food_name": food_name})
+    print("---COMPLETE RAG GENERATE---")
+    logger.add_log_with_context("rag_recipe_generator", {"img_path": state.get("img_path", ""), "documents": documents, "question": question, "generation": generation})
     return {"documents": documents, "question": question, "generation": generation}
 
 
@@ -97,6 +100,7 @@ def grade_documents(state):
     if num_of_irrelevant_docs > (num_of_docs / 2):
       rag_generate = "No"
     print(f"rag_generate: {rag_generate}")
+    logger.add_log_with_context("grade_documents", {"img_path": state.get("img_path", ""), "documents": filtered_docs, "question": question, "rag_generate": rag_generate})
     return {"documents": filtered_docs, "question": question, "rag_generate": rag_generate}
 
 
@@ -126,6 +130,7 @@ def web_search(state):
         documents.append(web_results)
     else:
         documents = [web_results]
+    logger.add_log_with_context("web_search", {"img_path": state.get("img_path", ""), "documents": documents, "question": question})
     return {"documents": documents, "question": question}
 
 
@@ -170,6 +175,7 @@ def extract_ingredients(state):
         # Convert JSON to regular text
         text = f"Description: {description}\nIngredients: {', '.join(ingredients)}\nDish Name: {dish_name}"
         print(text)
+        logger.add_log_with_context("extract_ingredients", {"img_path": img_path, "ingredients": ingredients, "description": description, "dish_name": dish_name})
         return {"documents": [], "ingredients": ingredients, "food_name": dish_name, "text": text}
     except json.JSONDecodeError:
         # Handle the case where the response is not a JSON object
@@ -195,6 +201,7 @@ def image_caption(state):
     img_path = state["img_path"]
     # img_path="/content/burger.png"
     response = image_caption_tool.invoke({"img_path":img_path})
+    logger.add_log_with_context("image_caption", {"documents": [], "ingredients": [], "food_name": "", "question": question, "text": response, "generation": response})
     # img_path = "/content/burger .png"
     return {"documents": [], "ingredients": [], "food_name": "", "question": question, "text": response, "generation": response}
 
@@ -210,7 +217,7 @@ def recipe_generator(state):
         state (dict): Appended web results to documents
     """
 
-    print("---RECIPE GENERATOR SEARCH---")
+    print("---RECIPE GENERATOR WITHOUT RAG---")
     question = state["question"]
     documents = state["documents"]
     text = state["text"]
@@ -219,4 +226,5 @@ def recipe_generator(state):
     response = generate_recipe_tool.invoke({"input": text})
     print(response)
     # img_path = "/content/burger.png"
+    logger.add_log_with_context("recipe_generator", {"img_path": state.get("img_path", ""), "question": question, "text": text, "generation": response})
     return {"documents": [], "ingredients": [], "food_name": "", "question": question, "generation": response}
