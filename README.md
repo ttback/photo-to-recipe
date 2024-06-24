@@ -16,13 +16,14 @@ git clone git@github.com:ttback/photo-to-recipe.git
 cd <repository-directory>
 ```
 
+2. **Set up NVIDIA_API_KEY key** in .env file, see .env.example
 
-2. **Build and Run the Docker Containers**:
+3. **Build and Run the Docker Containers**:
 ```sh
 docker compose up
 ```
 
-3. ***Run it in browser***:
+4. ***Run it in browser***:
 localhost:7860
 
 The images in imges folder can be used to test out basic workflow with burger, sushi and non-food photo from Nvidia example for image caption.
