@@ -12,7 +12,7 @@ To run this project, you only need to use Docker Compose. Follow the steps below
 
 1. **Clone the Repository**:
 ```sh
-git clone <repository-url>
+git clone git@github.com:ttback/photo-to-recipe.git
 cd <repository-directory>
 ```
 
