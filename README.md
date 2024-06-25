@@ -2,6 +2,9 @@
 
 This project leverages generative AI agents to generate recipes from food images. By utilizing ️LangGraph, various LLM-powered tools and conditional workflows, the application can extract ingredients, retrieve relevant documents, generate recipes, and have self-supervised workflows to correct mistakes and errors in generation.  
 
+### Demo Video
+[![Watch the demo video](https://img.youtube.com/vi/zODXkC5Hrnw/0.jpg)](https://www.youtube.com/watch?v=zODXkC5Hrnw&t=1s)
+
 ### Related Papers
 - **Routing:** Adaptive RAG ([paper](https://arxiv.org/abs/2403.14403)). Route questions to different type of retrieval 
 - **Self-correction:** Self-RAG ([paper](https://arxiv.org/abs/2310.11511)). Fix answers that either contain hallucinations or don't answer the question
@@ -11,6 +14,8 @@ This project leverages generative AI agents to generate recipes from food images
 2. [LangGraph_HandlingAgent_IntermediateSteps](https://github.com/NVIDIA/GenerativeAIExamples/blob/main/notebooks/06_LangGraph_HandlingAgent_IntermediateSteps.ipynb)
 3. [Agent_use_tools_leveraging_NVIDIA_AI_endpoints.ipynb](https://github.com/NVIDIA/GenerativeAIExamples/blob/main/notebooks/04_Agent_use_tools_leveraging_NVIDIA_AI_endpoints.ipynb)
 4. [LangChain NVIDIA Integration](https://github.com/langchain-ai/langchain-nvidia/tree/main)
+5. [Scenario](https://www.scenario.com/) for Image Assets generation
+6. Elevent Lab for Audio in the demo video
 
 ## How to Run 
 The project is created with Langchain/Langgraph and can be run with `docker compose`
