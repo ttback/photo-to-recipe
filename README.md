@@ -49,7 +49,7 @@ The vector db contains burger recipes only, so sushi can be used to test for mos
 5. **RAG-based recipe generation**: Using retrieved documents, the writer agent will generate recipe.
 6. **Automated Hallucation checker**: Agents will check whether generated recipe is grounded by documents and is for the food and ingredients detected in the input image.
 
-## Main Agents and LLM power tools
+## AI Agents and LLM power tools
 
 | Image                                                                 | Role      | Description                | Tools       |
 |-----------------------------------------------------------------------|-----------|----------------------------|-------------|
