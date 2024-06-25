@@ -26,7 +26,7 @@ To run this project, you only need to use Docker Compose. Follow the steps below
 1. **Clone the Repository**:
 ```sh
 git clone git@github.com:ttback/photo-to-recipe.git
-cd <repository-directory>
+cd photo-to-recipe
 ```
 
 2. **Set up NVIDIA_API_KEY key** in .env file, see .env.example
