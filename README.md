@@ -8,8 +8,9 @@ This project leverages generative AI agents to generate recipes from food images
 
 ### Credits and Inspiration
 1. [NVIDIA/GenerativeAIExamples](https://github.com/NVIDIA/GenerativeAIExamples/tree/main)
-2. [Agent_use_tools_leveraging_NVIDIA_AI_endpoints.ipynb](https://github.com/NVIDIA/GenerativeAIExamples/blob/main/notebooks/04_Agent_use_tools_leveraging_NVIDIA_AI_endpoints.ipynb)
-3. [LangChain NVIDIA Integration](https://github.com/langchain-ai/langchain-nvidia/tree/main)
+2. [LangGraph_HandlingAgent_IntermediateSteps](https://github.com/NVIDIA/GenerativeAIExamples/blob/main/notebooks/06_LangGraph_HandlingAgent_IntermediateSteps.ipynb)
+3. [Agent_use_tools_leveraging_NVIDIA_AI_endpoints.ipynb](https://github.com/NVIDIA/GenerativeAIExamples/blob/main/notebooks/04_Agent_use_tools_leveraging_NVIDIA_AI_endpoints.ipynb)
+4. [LangChain NVIDIA Integration](https://github.com/langchain-ai/langchain-nvidia/tree/main)
 
 ## How to Run 
 The project is created with Langchain/Langgraph and can be run with `docker compose`
