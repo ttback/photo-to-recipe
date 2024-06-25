@@ -55,7 +55,7 @@ The vector db contains burger recipes only, so sushi can be used to test for mos
 |-----------------------------------------------------------------------|-----------|----------------------------|-------------|
 | <img src="https://github.com/ttback/photo-to-recipe/assets/607140/0261bb41-9bdb-4f08-8380-6cbc95ee56e8" width="100"> | Reader    | Reads content              | <ul><li>image_router</li><li>ingredients_recognizer</li><li>image_caption</li></ul>        |
 | <img src="https://github.com/ttback/photo-to-recipe/assets/607140/63366760-6ac1-4c25-a40a-5f324348ddaa" width="100"> | Searcher  | Searches for information   | <ul><li>doc_retriever</li><li>relevance_grader</li></ul>    |
-| <img src="https://github.com/ttback/photo-to-recipe/assets/607140/62e18d29-ef30-4020-afbf-bb28697f3c8e" width="100"> | Writer    | Writes content             | <ul><li>rag_recipe_generator</li><li>recipe_generator</li></ul>  |
+| <img src="https://github.com/ttback/photo-to-recipe/assets/607140/62e18d29-ef30-4020-afbf-bb28697f3c8e" width="100"> | Writer    | Writes Recipe             | <ul><li>rag_recipe_generator</li><li>recipe_generator</li></ul>  |
 | <img src="https://github.com/ttback/photo-to-recipe/assets/607140/8e0f1b82-eae7-448c-8318-b0425d454757" width="100"> | Reviewer  | Reviews content            | <ul><li>hallucination_grader</li><li>answer_grader</li></ul>     |
 
 ## Tools
