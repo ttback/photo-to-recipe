@@ -70,7 +70,7 @@ The vector db contains burger recipes only, so sushi can be used to test for mos
 | `relevance_grader`           | Grades the relevance of retrieved documents to the question.                 | `meta/llama3-70b-instruct`                           |
 | `rag_recipe_generator`      | Generates a recipe using RAG on retrieved documents.                         | `meta/llama3-70b-instruct`    |
 | `recipe_generator`          | Generates a recipe without using RAG.                                        | `mistralai/mixtral-8x7b-instruct-v0.1`                           |
-| `hallucination_grader`      | Grade for hallucinations in the generated recipe.                           | meta/llama3-70b-instruct                           |
+| `hallucination_grader`      | Grade for hallucinations in the generated recipe.                           | `meta/llama3-70b-instruct`                           |
 | `answer_grader` | Grades the generated recipe against the documents and question. | `meta/llama3-70b-instruct`                           |
 
 
