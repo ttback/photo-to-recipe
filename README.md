@@ -15,7 +15,7 @@ This project leverages generative AI agents to generate recipes from food images
 3. [Agent_use_tools_leveraging_NVIDIA_AI_endpoints.ipynb](https://github.com/NVIDIA/GenerativeAIExamples/blob/main/notebooks/04_Agent_use_tools_leveraging_NVIDIA_AI_endpoints.ipynb)
 4. [LangChain NVIDIA Integration](https://github.com/langchain-ai/langchain-nvidia/tree/main)
 5. [Scenario](https://www.scenario.com/) for Image Assets generation
-6. Elevent Lab for Audio in the demo video
+6. [Elevent Labs](https://elevenlabs.io/) for Audio in the demo video
 
 ## How to Run 
 The project is created with Langchain/Langgraph and can be run with `docker compose`
