@@ -46,7 +46,7 @@ The vector db contains burger recipes only, so sushi can be used to test for mos
 1. **Unsupervised Image Type detection**: Handle food vs. non-food image without user interaction
 2. **Automatic Ingredient Extraction from Food Photo**: Using latest multi-modal SLM (`microsoft/phi-3-vision-128k-instruct`) to extract ingredient from food image
 3. **Document Retrieval**: Transform online web pages to vector store via langchain and Nvidia's embedding model, `NV-Embed-QA`
-4. **Conditional RAG or no-RAG generation**: Check whether the retrieved documents are relevant for the recipe generation process, before proceeding with RAG-based generation. If for some reasons, the web urls changed content, or are unavailable, ADDA team is smart enough to avoid RGA-based generation
+4. **Conditional (RAG or no-RAG) generation**: Check whether the retrieved documents are relevant for the recipe generation process, before proceeding with RAG-based generation. If for some reasons, the web urls changed content, or are unavailable, ADDA team is smart enough to avoid RGA-based generation
 5. **RAG-based recipe generation**: Using retrieved documents, the writer agent will generate recipe.
 6. **Automated Hallucation checker**: Agents will check whether generated recipe is grounded by documents and is for the food and ingredients detected in the input image.
 
