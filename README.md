@@ -1,6 +1,6 @@
 # Photo to Recipe generation with Multi-agents
 
-This project leverages generative AI agents to generate recipes from food images. By utilizing ️LangGraph, various LLM-powered tools and conditional workflows, the application can extract ingredients, retrieve relevant documents, generate recipes, and have self-supervision agents to correct mistakes and errors in generation.  
+This project leverages generative AI agents to generate recipes from food images. By utilizing ️LangGraph, various LLM-powered tools and conditional workflows, the application can extract ingredients, retrieve relevant documents, generate recipes, and have self-supervised workflows to correct mistakes and errors in generation.  
 
 ### Related Papers
 - **Routing:** Adaptive RAG ([paper](https://arxiv.org/abs/2403.14403)). Route questions to different type of retrieval 
