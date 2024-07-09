@@ -8,6 +8,7 @@ This project leverages generative AI agents to generate recipes from food images
 ### Related Papers
 - **Routing:** Adaptive RAG ([paper](https://arxiv.org/abs/2403.14403)). Route questions to different type of retrieval 
 - **Self-correction:** Self-RAG ([paper](https://arxiv.org/abs/2310.11511)). Fix answers that either contain hallucinations or don't answer the question
+- **LLM Critics Help Catch LLM Bugs** LLM-Critic ([paper](https://cdn.openai.com/llm-critics-help-catch-llm-bugs-paper.pdf)). This research trains AI "critics" to assist humans in evaluating code written by other AI models for more accurate evaluations.
 
 ### Credits and Inspiration
 1. [NVIDIA/GenerativeAIExamples](https://github.com/NVIDIA/GenerativeAIExamples/tree/main)
@@ -92,7 +93,7 @@ graph TD
     F -->|No| H[Generate Recipe without RAG]
     G --> I{Is the RAG generation grounded in documents?}
     I -->|Yes| J{Does the RAG generation address the question?}
-    I -->|No| G
+    I -->|No| H  
     J -->|Yes| K[End]
     J -->|No| H
     D --> L[End]
